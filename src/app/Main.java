@@ -1,13 +1,13 @@
 package app;
 
 import modelo.Nodo;
-import negocio.ArbolBinario;
+import negocio.Arbolbinario;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArbolBinario<String> arbol = new ArbolBinario<>();
+        Arbolbinario<String> arbol = new Arbolbinario<>();
         int opcion = 0;
 
         do {
@@ -89,7 +89,7 @@ public class Main {
                     Nodo<String> nodoBuscadoH = arbol.buscar(nombreNodoHoja);
                     if (nodoBuscadoH != null) {
                         if (nodoBuscadoH.esHoja()) {
-                            System.out.println("El nodo [" + nombreNodoHoja + "] SÍ es una hoja.");
+                            System.out.println("El nodo [" + nombreNodoHoja + "] SI es una hoja.");
                         } else {
                             System.out.println("El nodo [" + nombreNodoHoja + "] NO es una hoja.");
                         }
@@ -100,10 +100,10 @@ public class Main {
 
                 case 8:
                     System.out.println("\n--- DEMOSTRACIÓN DE CASOS DE PRUEBA OBLIGATORIOS ---");
-                    ArbolBinario<String> arbolVacio = new ArbolBinario<>();
+                    Arbolbinario<String> arbolVacio = new Arbolbinario<>();
                     System.out.println("-> Árbol Vacío | Nodos: " + arbolVacio.contarNodos() + " | Altura: " + arbolVacio.altura());
                     
-                    ArbolBinario<String> arbolUnico = new ArbolBinario<>();
+                    Arbolbinario<String> arbolUnico = new Arbolbinario<>();
                     arbolUnico.crearRaiz("UNICO");
                     System.out.println("-> Árbol Un Nodo | Hojas: " + arbolUnico.contarHojas() + " | Altura: " + arbolUnico.altura());
                     

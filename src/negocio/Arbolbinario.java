@@ -2,11 +2,11 @@ package negocio;
 
 import modelo.Nodo;
 
-public class ArbolBinario<T> {
+public class Arbolbinario<T> {
 
     private Nodo<T> raiz;
 
-    public ArbolBinario() {
+    public Arbolbinario() {
         this.raiz = null;
     }
 
@@ -41,7 +41,6 @@ public class ArbolBinario<T> {
     public boolean esVacio() {
         return raiz == null;
     }
-
 
     public int contarNodos() {
         return contarNodos(raiz);
